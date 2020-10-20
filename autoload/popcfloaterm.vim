@@ -76,9 +76,6 @@ function! popcfloaterm#Show(key, index)
 
     call popc#ui#Destroy()
     call floaterm#terminal#open_existing(s:ftm[a:index])
-    if a:key ==# 'Space'
-        call popc#ui#Create(s:lyr.name)
-    endif
 endfunction
 " }}}
 
