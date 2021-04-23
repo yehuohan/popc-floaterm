@@ -1,6 +1,6 @@
 " PopcFloaterm: Popc pluging for floaterm.
 " Maintainer: yehuohan, <yehuohan@qq.com>, <yehuohan@gmail.com>
-" Version: 0.4
+" Version: 0.5
 "
 
 " SETCION: vim-script {{{1

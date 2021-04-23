@@ -39,7 +39,7 @@ function! s:createBuffer()
     let l:info = []
     for bnr in floaterm#buflist#gather()
         call add(s:ftm, bnr)
-        call add(l:name, getbufvar(bnr, 'title', 'UnNamed'))
+        call add(l:name, getbufvar(bnr, 'floaterm_title', 'UnNamed'))
         let l:wid = strwidth(l:name[-1])
         let l:max = (l:wid > l:max) ? l:wid : l:max
         call add(l:info, getbufinfo(bnr)[0]['name'])
@@ -115,7 +115,7 @@ function! popcfloaterm#Rename(key, index)
     endif
 
     let name = popc#ui#Input('Input name: ')
-    call setbufvar(s:ftm[a:index], 'title', name)
+    call setbufvar(s:ftm[a:index], 'floaterm_title', name)
     call popcfloaterm#Pop()
 endfunction
 " }}}
