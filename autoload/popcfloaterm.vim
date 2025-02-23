@@ -19,8 +19,7 @@ let s:mapsData = [
 " FUNCTION: popcfloaterm#Init() {{{
 function! popcfloaterm#Init()
     let s:lyr = s:popc.addLayer('Floaterm', {
-                \ 'bindCom' : 0,
-                \ 'fnPop' : function('popcfloaterm#Pop'),
+                \ 'func' : 'popcfloaterm#Pop',
                 \ })
     for md in s:mapsData
         call s:lyr.addMaps(md[0], md[1], md[2])
@@ -55,7 +54,7 @@ function! s:createBuffer()
         call add(l:text, l:line)
     endfor
 
-    call s:lyr.setBufs(v:t_list, l:text)
+    call s:lyr.setBufs(l:text)
 endfunction
 " }}}
 
